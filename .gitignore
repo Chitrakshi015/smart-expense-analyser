@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+Financial_Report.pdf
+.venv/
+.env
