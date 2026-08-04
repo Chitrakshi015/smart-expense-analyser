@@ -43,21 +43,21 @@ def generate_pdf(
 
     story.append(
         Paragraph(
-            f"Income: ₹{summary['Income']:,.2f}",
+            f"Income: Rs.{summary['Income']:,.2f}",
             styles["BodyText"]
         )
     )
 
     story.append(
         Paragraph(
-            f"Expense: ₹{summary['Expense']:,.2f}",
+            f"Expense: Rs.{summary['Expense']:,.2f}",
             styles["BodyText"]
         )
     )
 
     story.append(
         Paragraph(
-            f"Savings: ₹{summary['Savings']:,.2f}",
+            f"Savings: Rs.{summary['Savings']:,.2f}",
             styles["BodyText"]
         )
     )
@@ -88,8 +88,8 @@ def generate_pdf(
 
         table_data.append([
             str(row["Month"]),
-            f"₹{row['Income']:,.2f}",
-            f"₹{row['Expense']:,.2f}"
+            f"Rs.{row['Income']:,.2f}",
+            f"Rs.{row['Expense']:,.2f}"
         ])
 
     table = Table(table_data)
@@ -165,7 +165,7 @@ def generate_pdf(
 
                 row["Description"],
 
-                f"₹{abs(row['Amount']):,.2f}",
+                f"Rs.{abs(row['Amount']):,.2f}",
 
                 row["Category"]
 
