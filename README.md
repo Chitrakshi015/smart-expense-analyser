@@ -59,16 +59,3 @@ Any of these column name variants are auto-detected:
 - **Type** (optional): `Type`, `Dr/Cr` — if present, used to tell expenses
   from income; otherwise negative amounts are treated as expenses.
 
-## Possible viva/interview questions this covers
-
-- Why K-Means and not another clustering algorithm? (simple, fast,
-  interpretable for low-dimensional numeric features; here k=4 is fixed
-  because we want fixed behavioral buckets rather than discovering k)
-- Why Z-score for anomaly detection instead of Isolation Forest? (small
-  per-category sample sizes, easy to explain, no training needed — a good
-  fit for a lightweight rule-augmented ML pipeline)
-- How is feature scaling handled? (`MinMaxScaler` on amount and category
-  frequency before clustering, since K-Means is distance-based)
-- How would you extend this? (per-user budgets, recurring-charge detection
-  via string similarity, a proper anomaly model like Isolation Forest once
-  more data is available, persistence via a database instead of re-upload)
